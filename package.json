@@ -1,31 +1,30 @@
 {
-  "name": "parabank-test-suite",
+  "name": "parabank-test-automation",
   "version": "1.0.0",
-  "description": "Automated test suite for ParaBank application with CI/CD integration",
-  "main": "test.js",
+  "description": "Playwright test automation for ParaBank using Page Object Model",
+  "main": "index.js",
   "scripts": {
-    "test": "node test.js",
-    "test:headed": "HEADLESS=false node test.js",
-    "install-browsers": "npx playwright install chromium"
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:ui": "npx playwright test --ui",
+    "test:report": "npx playwright show-report",
+    "test:registration": "npx playwright test tests/registration.spec.js",
+    "install:browsers": "npx playwright install"
   },
-  "dependencies": {
-    "playwright": "^1.40.0"
-  },
-  "devDependencies": {},
   "keywords": [
-    "testing",
-    "automation",
     "playwright",
-    "parabank",
-    "ci-cd"
+    "automation",
+    "testing",
+    "page-object-model",
+    "parabank"
   ],
   "author": "Test Automation Team",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/srikantharuban/demo_01.git"
+  "devDependencies": {
+    "@playwright/test": "^1.55.0"
   },
-  "engines": {
-    "node": ">=14.0.0"
+  "dependencies": {
+    "faker": "^5.5.3"
   }
 }
