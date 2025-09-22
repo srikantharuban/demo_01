@@ -1,0 +1,31 @@
+{
+  "name": "parabank-test-suite",
+  "version": "1.0.0",
+  "description": "Automated test suite for ParaBank application with CI/CD integration",
+  "main": "test.js",
+  "scripts": {
+    "test": "node test.js",
+    "test:headed": "HEADLESS=false node test.js",
+    "install-browsers": "npx playwright install chromium"
+  },
+  "dependencies": {
+    "playwright": "^1.40.0"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "testing",
+    "automation",
+    "playwright",
+    "parabank",
+    "ci-cd"
+  ],
+  "author": "Test Automation Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/srikantharuban/demo_01.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
